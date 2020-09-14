@@ -12,6 +12,11 @@ pipeline {
                 bat 'mvn validate'
             }
         }
+          stage('run') {
+            steps {
+               bat 'mvn verify'
+            }
+        }
        
     }
 }
