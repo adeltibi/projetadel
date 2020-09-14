@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clean') {
+            steps {
+               bat 'mvn clean'
+            }
+        }
+        stage('validate') {
+            steps {
+                bat 'mvn validate'
+            }
+        }
+       
+    }
+}
